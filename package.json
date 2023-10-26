@@ -1,0 +1,17 @@
+{
+  "name": "restaurant",
+  "version": "1.0.0",
+  "description": "Site de ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/index.scss:./css/index.css ./sass/restaurant.scss:./css/restaurant.css"
+  },
+  "keywords": [
+    "restaurant",
+    "ohmyfood"  ],
+  "author": "ikram",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.66.1"
+  }
+}

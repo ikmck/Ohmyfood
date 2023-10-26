@@ -1,0 +1,58 @@
+.foctionnement{
+        @include flexColumn;      
+        background-color: white;
+        padding: 30px 50px;
+        h2 {
+            font-size: 24px;
+            color: black;
+            margin-bottom: 20px;
+          }
+    .fonctionnementItems{
+        @include flexColumn;  
+        gap:20px;
+        @media screen and (min-width: 769px){
+            flex-direction: row;
+            justify-content: space-between;
+       }
+                        .fonctionnementItem{
+                            @include flexRow;
+                            align-items: center;
+                            gap:35px;
+                            background-color: $bg-section;
+                            padding: 20px;
+                            border-radius: 20px;
+                            box-shadow: 1px 4px 8px 0px rgba(0,0,0,0.1);
+                            &_ordre {
+                                background-color: $primary;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 50%;
+                                margin-left: -35px;
+                                font-weight: bold;
+                                font-size: 18px;
+                                color: #fff;
+                            
+                              }
+                            .icon{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 30px;
+                                height: 30px;
+                              i{
+                                font-size: 24px;
+                                color: #7E7E7E;
+                                &:hover{
+                                    color: $primary;
+                                }
+                              }
+                            }
+                      
+                        }
+
+                      
+    }
+}

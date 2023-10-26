@@ -1,0 +1,81 @@
+@mixin flexColumn{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+
+@mixin flexRow{
+    display: flex;
+    flex-direction: row;
+    gap:15px;
+}
+
+@mixin btn
+{
+    background: linear-gradient(to bottom right, $secondary, $primary);
+    color: white;
+    padding: 17px 43px;
+    border-radius: 60px;
+    border: none;
+    display: block;
+    margin: 46px auto auto auto;
+    font-size: 1.1rem;
+    box-shadow: 1px 4px 8px 0px rgb(0,0,0,0.25);
+    cursor: pointer;
+    &:hover{
+        background: linear-gradient(to bottom right, $primary, $secondary);
+        box-shadow: 1px 4px 8px 0px rgb(0,0,0,0.5);
+    }
+}
+
+@mixin btn-heart
+{
+    position: relative;
+            width: 24px;
+            height: 24px;
+          
+
+            .fa-heart {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 24px;
+            }
+
+            .fa-regular {
+                opacity: 1;
+                color: black;
+                cursor: pointer;
+                z-index: 2;
+                &:hover{
+                    opacity: 0;
+                    z-index: 1;
+                    + .fa-solid{
+                        opacity: 1;
+                        z-index: 2;
+                        animation: heartFull 0.5s linear both; 
+                    }
+                }
+            }
+
+            .fa-solid {
+                opacity: 0;
+                z-index: 1;
+                cursor: pointer;
+                background: linear-gradient(to bottom right, $primary, $secondary);
+                -webkit-background-clip: text;
+                color: transparent;
+                transform-origin: 50% bottom ;
+                transform: scale(1);
+                animation: transform 0.5s cubic-bezier(0.43, 0.21, 1, 0.45);
+            }
+           
+}
+@keyframes heartFull {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

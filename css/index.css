@@ -1,0 +1,386 @@
+@keyframes heartFull {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "roboto";
+  margin: 0px;
+  background-color: #f6f6f6;
+}
+
+.main-container {
+  max-width: 1440px;
+  margin: 0px auto;
+  padding-top: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0px;
+}
+
+.loader {
+  background: rgba(255, 255, 255, 0.95);
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  flex-direction: row;
+  /*-webkit-animation: loader 2s 2s ease-out both;*/
+  animation: bounce 1.6s ease-in-out both;
+  animation-delay: 2.5s;
+}
+
+.loader__circle {
+  background-color: #9356dc;
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  margin: 10px;
+}
+
+.loader__circle:nth-child(1) {
+  animation: bounce 1.6s ease 0.2s infinite alternate;
+}
+
+.loader__circle:nth-child(2) {
+  animation: bounce 1.6s ease 0.4s infinite alternate;
+}
+
+.loader__circle:nth-child(3) {
+  animation: bounce 1.6s ease 0.6s infinite alternate;
+}
+
+.loader__circle:nth-child(4) {
+  animation: bounce 1.6s ease 0.8s infinite alternate;
+}
+
+@keyframes bounce {
+  to {
+    transform: translate3d(0, -4rem, 0);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+.header .return {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .return .fa-arrow-left {
+  font-size: 30px;
+}
+.header .logo {
+  width: auto;
+  flex: 1;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+}
+.header .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  background: #353535;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+@media screen and (min-width: 769px) {
+  .footer {
+    flex-direction: row-reverse;
+    padding-top: 40px;
+    gap: 40px;
+  }
+}
+.footer__title {
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
+  font-size: 18px;
+  text-transform: lowercase;
+}
+.footer__link {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+@media screen and (min-width: 769px) {
+  .footer__link {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.footer__link a {
+  color: white;
+}
+.footer__link a i {
+  font-size: 14px;
+}
+
+.boutonRose {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: white;
+  padding: 17px 43px;
+  border-radius: 60px;
+  border: none;
+  display: block;
+  margin: 46px auto auto auto;
+  font-size: 1.1rem;
+  box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.boutonRose:hover {
+  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+  box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.5);
+}
+
+.localisation {
+  background-color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.localisation .search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  box-shadow: 0px 2px 5px 0px;
+  gap: 10px;
+  height: 40px;
+}
+.localisation .search__text {
+  display: inline-block;
+  margin: 0;
+  height: 100%;
+  background-color: #eaeaea;
+  border: none;
+  color: black;
+}
+.localisation .explorer {
+  padding: 40px 30px 40px 30px;
+  background-color: #f6f6f6;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.localisation .explorer__title {
+  font-weight: bolder;
+}
+.foctionnement {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+  padding: 30px 50px;
+}
+.foctionnement h2 {
+  font-size: 24px;
+  color: black;
+  margin-bottom: 20px;
+}
+.foctionnement .fonctionnementItems {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  gap: 20px;
+}
+@media screen and (min-width: 769px) {
+  .foctionnement .fonctionnementItems {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.foctionnement .fonctionnementItems .fonctionnementItem {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  gap: 35px;
+  background-color: #f6f6f6;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.1);
+}
+.foctionnement .fonctionnementItems .fonctionnementItem_ordre {
+  background-color: #9356DC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: -35px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+}
+.foctionnement .fonctionnementItems .fonctionnementItem .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+.foctionnement .fonctionnementItems .fonctionnementItem .icon i {
+  font-size: 24px;
+  color: #7E7E7E;
+}
+.foctionnement .fonctionnementItems .fonctionnementItem .icon i:hover {
+  color: #9356DC;
+}
+
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px 50px;
+}
+.restaurant h2 {
+  font-size: 24px;
+  color: black;
+  margin-bottom: 20px;
+}
+.restaurant .restaurant_cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.restaurant .restaurant_cards .restaurant_card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 200px;
+  border-radius: 20px;
+}
+.restaurant .restaurant_cards .restaurant_card .link {
+  height: 60%;
+  width: 100%;
+  position: relative;
+}
+.restaurant .restaurant_cards .restaurant_card .link .news {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 5px 10px;
+  background-color: #99E2D0;
+  border-radius: 5px;
+  color: #008766;
+  font-size: 12px;
+}
+.restaurant .restaurant_cards .restaurant_card .link img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.restaurant .restaurant_cards .restaurant_card .card-body {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurant .restaurant_cards .restaurant_card .card-body .card-title {
+  margin-left: 15px;
+  color: black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.restaurant .restaurant_cards .restaurant_card .card-body .card-title p {
+  font-size: 13px;
+  font-weight: normal;
+}
+.restaurant .restaurant_cards .restaurant_card .card-body .card-title h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.restaurant .restaurant_cards .restaurant_card .card-body .btn-heart {
+  margin-right: 15px;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.restaurant .restaurant_cards .restaurant_card .card-body .btn-heart .fa-heart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 24px;
+}
+.restaurant .restaurant_cards .restaurant_card .card-body .btn-heart .fa-regular {
+  opacity: 1;
+  color: black;
+  cursor: pointer;
+  z-index: 2;
+}
+.restaurant .restaurant_cards .restaurant_card .card-body .btn-heart .fa-regular:hover {
+  opacity: 0;
+  z-index: 1;
+}
+.restaurant .restaurant_cards .restaurant_card .card-body .btn-heart .fa-regular:hover + .fa-solid {
+  opacity: 1;
+  z-index: 2;
+  animation: heartFull 0.5s linear both;
+}
+.restaurant .restaurant_cards .restaurant_card .card-body .btn-heart .fa-solid {
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  color: transparent;
+  transform-origin: 50% bottom;
+  transform: scale(1);
+  animation: transform 0.5s cubic-bezier(0.43, 0.21, 1, 0.45);
+}
+.restaurant .restaurant_cards .restaurant_card .card-body .btn-heart i {
+  font-size: 24px;
+}
+
+/*# sourceMappingURL=index.css.map */
