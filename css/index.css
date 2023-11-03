@@ -288,12 +288,26 @@ h1, h2, h3, h4, h5, p {
   flex-direction: column;
   gap: 20px;
 }
+@media screen and (min-width: 1024px) {
+  .restaurant .restaurant_cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: unset;
+    justify-content: space-between;
+    row-gap: 30px;
+  }
+}
 .restaurant .restaurant_cards .restaurant_card {
   display: flex;
   flex-direction: column;
   background-color: white;
   height: 200px;
   border-radius: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant .restaurant_cards .restaurant_card {
+    width: 48%;
+  }
 }
 .restaurant .restaurant_cards .restaurant_card .link {
   height: 60%;
